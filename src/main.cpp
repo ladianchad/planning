@@ -24,11 +24,12 @@ int main(int, char const *[])
     for (auto c = connected_nodes->begin(); c != connected_nodes->end(); c++)
     {
       std::cout<<"neighbor"<<std::endl;
-      std::cout<<"id : "<<c->first->getKey()<<std::endl;
-      std::cout<<"cost : "<<c->second<<std::endl;
+      planners::general::Node<int>::SharedPtr neighbor_node;
+      double cost;
+      std::tie(neighbor_node, cost) = *c;
+      std::cout<<"id : "<<neighbor_node->getKey()<<std::endl;
+      std::cout<<"cost : "<<cost<<std::endl;
     }
-  }
-  
-  
+  }  
   return 0;
 }
