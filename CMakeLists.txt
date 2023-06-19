@@ -27,6 +27,6 @@ set(executable_name planner)
 # )
 
 add_executable(${executable_name}
-  main.cpp
+  src/main.cpp
 )
 # target_link_libraries(${executable_name} ${library_name})
